@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <h1 class="jumbotron text-center border border-dark">Dojo Survey</h1>
+    <div class="form-group container album py-5 bg-light border border-dark">
+        <ul class="list-group list-inline">
+            <form action="/results" method="post">
+                    <li class="mb-3">
+                        <label for="name" class="form-control">Your Name:</label>
+                        <input type="text" id="name" name="fullname" value="" class="form-control">
+                    </li>
+                    <li class="dropdown mb-3">
+                        <label for="location" class="form-control">Dojo Location:</label>
+                        <select name="location" id="location" class="btn btn-outline-secondary">
+                            <option selected>Select</option>
+                            <option value="San Jose">San Jose</option>
+                            <option value="Seattle">Seattle</option>
+                            <option value="Online">Online</option>
+                            <option value="San Diego">San Diego</option>
+                        </select>
+                    </li>
+                    <li class="dropdown mb-3">
+                        <label for="language" class="form-control">Favorite Language:</label>
+                        <select name="language" id="language" class="btn btn-outline-secondary">
+                            <option selected>Select</option>
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                        </select>
+                    </li>
+                    <li class="mb-1">
+                        <textarea name="comments" id="comments" class="form-control">Comments:</textarea>
+                    </li>
+                    <li class="mb-1">
+                        <input type="submit" value="Submit" class="btn btn-secondary btn-lg">
+                    </li>
+            </form>
+            
+        </ul>
+    </div>
+</body>
+</html>
