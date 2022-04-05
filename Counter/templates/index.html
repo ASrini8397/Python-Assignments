@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="body">
+        <h1>Counter</h1>
+        <h2>You have visited this page: {{session['count']}} times</h2>
+        <form action='/increment' method='post'>
+            <button class="button" >+ 2</button>
+        </form>
+        <form action='/clear' method='post'>
+            <button class="button" >Clear Counter</button>
+
+        <form action='/special_increment' method='post'>
+            <label for="number1">Increment by:</label>
+            <input type="number" name="number1" id="number1" >
+        </form>
+    </div>
+</body>
+</html>
